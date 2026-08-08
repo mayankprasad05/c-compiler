@@ -1,0 +1,75 @@
+[PROGRAM]
+└── [FUNC_DEF]  "main"
+    └── [BLOCK]
+        ├── [VAR_DECL]  "a"
+        │   └── [NUMBER]  val=10
+        ├── [VAR_DECL]  "b"
+        │   └── [NUMBER]  val=3
+        ├── [PRINTF]  print text: "a = "
+        ├── [PRINTF]  print variable: a
+        ├── [PRINTF]  print text: "\n"
+        ├── [PRINTF]  print text: "b = "
+        ├── [PRINTF]  print variable: b
+        ├── [PRINTF]  print text: "\n"
+        ├── [VAR_DECL]  "sum"
+        │   └── [BINARY_OP]  op=+
+        │       ├── [VARIABLE]  "a"
+        │       └── [VARIABLE]  "b"
+        ├── [PRINTF]  print text: "a + b = "
+        ├── [PRINTF]  print variable: sum
+        ├── [PRINTF]  print text: "\n"
+        ├── [VAR_DECL]  "diff"
+        │   └── [BINARY_OP]  op=-
+        │       ├── [VARIABLE]  "a"
+        │       └── [VARIABLE]  "b"
+        ├── [PRINTF]  print text: "a - b = "
+        ├── [PRINTF]  print variable: diff
+        ├── [PRINTF]  print text: "\n"
+        ├── [VAR_DECL]  "prod"
+        │   └── [BINARY_OP]  op=*
+        │       ├── [VARIABLE]  "a"
+        │       └── [VARIABLE]  "b"
+        ├── [PRINTF]  print text: "a * b = "
+        ├── [PRINTF]  print variable: prod
+        ├── [PRINTF]  print text: "\n"
+        ├── [VAR_DECL]  "x"
+        │   └── [NUMBER]  val=7
+        ├── [IF]
+        │   ├── [BINARY_OP]  op=>
+        │   │   ├── [VARIABLE]  "x"
+        │   │   └── [NUMBER]  val=5
+        │   ├── [BLOCK]
+        │   │   └── [PRINTF]  print text: "x is greater than 5\n"
+        │   └── [BLOCK]
+        │       └── [PRINTF]  print text: "x is small\n"
+        ├── [VAR_DECL]  "i"
+        │   └── [NUMBER]  val=1
+        ├── [VAR_DECL]  "total"
+        │   └── [NUMBER]  val=0
+        ├── [WHILE]
+        │   ├── [BINARY_OP]  op=<=
+        │   │   ├── [VARIABLE]  "i"
+        │   │   └── [NUMBER]  val=5
+        │   └── [BLOCK]
+        │       ├── [ASSIGN]  "total"
+        │       │   └── [BINARY_OP]  op=+
+        │       │       ├── [VARIABLE]  "total"
+        │       │       └── [VARIABLE]  "i"
+        │       └── [INCREMENT]  "i"
+        ├── [PRINTF]  print text: "Sum 1 to 5 = "
+        ├── [PRINTF]  print variable: total
+        ├── [PRINTF]  print text: "\n"
+        ├── [FOR]
+        │   ├── [VAR_DECL]  "j"
+        │   │   └── [NUMBER]  val=1
+        │   ├── [BINARY_OP]  op=<=
+        │   │   ├── [VARIABLE]  "j"
+        │   │   └── [NUMBER]  val=4
+        │   ├── [INCREMENT]  "j"
+        │   └── [BLOCK]
+        │       ├── [PRINTF]  print text: "j = "
+        │       ├── [PRINTF]  print variable: j
+        │       └── [PRINTF]  print text: "\n"
+        └── [RETURN]
+            └── [NUMBER]  val=0
+
